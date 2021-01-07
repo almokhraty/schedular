@@ -13,7 +13,7 @@ typedef	struct
 void	SCHeduler_voidCreateTask(u8 Copy_u8periorty , u16 Copy_u16Periodicity ,u16  Copy_u16FirstDelay , void (*ptr)(void));
 
 void ISR(void);
-void Schedular(void);
+void Scheduler(void);
 
 
 #endif
