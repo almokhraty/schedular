@@ -2,11 +2,11 @@
 #include "BIT_MATH.h"
 
 #include "STK_interface.h"
-#include "Schedular.h"
+#include "Scheduler.h"
 
 
 Task  Scheduler_Tasks[NUM_OF_TASKS] ;
-u16   Schedular_Ticks = 0;
+u16   Scheduler_Ticks = 0;
 void	SCHeduler_voidCreateTask(u8 Copy_u8periorty , u16 Copy_u16Periodicity ,u16  Copy_u16FirstDelay , void (*ptr)(void))
 {
 	Scheduler_Tasks[Copy_u8periorty].Periodicity = Copy_u16Periodicity;
@@ -18,7 +18,7 @@ void	SCHeduler_voidCreateTask(u8 Copy_u8periorty , u16 Copy_u16Periodicity ,u16 
 /*     Tick  time of Schedular  */
 
 
-void Schedular(void)
+void Scheduler(void)
 {
 
 	for (u8 i = 0 ; i < NUM_OF_TASKS ; i++)
@@ -39,7 +39,7 @@ void ISR(void)
 
 
 	/* call task */
-	Schedular();
-	Schedular_Ticks++; 
+	Scheduler();
+	Scheduler_Ticks++; 
 }
 
