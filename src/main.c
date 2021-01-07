@@ -4,7 +4,7 @@
 #include "GPIO_interface.h"
 #include "NIVC_interface.h"
 #include "STK_interface.h"
-#include "Schedular.h"
+#include "Scheduler.h"
 
 void Task1(void);
 void Task2(void);
