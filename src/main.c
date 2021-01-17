@@ -23,9 +23,9 @@ int main(void)
 	MGPIO_voidSetPinDirection(MGPIO_U8_PORTA , GPIO_u8_PIN4 , GPIO_U8_OUTPUT_10MHZ_PP);
 	MGPIO_voidSetPinDirection(MGPIO_U8_PORTA , GPIO_u8_PIN5 , GPIO_U8_OUTPUT_10MHZ_PP);
 
-	SCHeduler_voidCreateTask(0 , 200 , 0, Task1);
-	SCHeduler_voidCreateTask(1 , 400 ,16000, Task2);
-	SCHeduler_voidCreateTask(2 , 600 ,36000, Task3);
+	SCHeduler_voidCreateTask(0 , 200 , Task1);
+	SCHeduler_voidCreateTask(1 , 400 , Task2);
+	SCHeduler_voidCreateTask(2 , 600 , Task3);
 
 
 	MSTK_voidSetIntervalPeriodic(1000, ISR);
